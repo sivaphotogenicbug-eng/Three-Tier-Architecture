@@ -149,22 +149,28 @@ CREATE TABLE feedback (
 
 ## Screenshots
 
-Screenshots of every step are in the [`screenshots/`](screenshots/) folder:
+All evidence is in the [`screenshots/`](screenshots/) folder.
 
-| Step | File |
+**App running through the public ALB:**
+
+![App via public ALB](screenshots/task9-03-app-via-public-alb.png)
+
+**Feedback stored in RDS:**
+
+![SQL output](screenshots/task9-04-sql-output.png)
+
+| Task | Screenshot |
 |---|---|
-| VPC resource map | `screenshots/task1-vpc-resource-map.png` |
-| Subnets and route tables | `screenshots/task1-subnets.png`, `task1-route-tables.png` |
-| Security groups | `screenshots/task5-security-groups.png` |
-| Web tier (Nginx) | `screenshots/task2-nginx.png` |
-| App tier (Flask service) | `screenshots/task3-flask-service.png` |
-| RDS database and table | `screenshots/task4-rds.png`, `task4-table.png` |
-| Public ALB + healthy targets | `screenshots/task6-public-alb.png` |
-| Internal ALB + healthy targets | `screenshots/task7-internal-alb.png` |
-| Nginx reverse proxy | `screenshots/task8-proxy.png` |
-| App via ALB DNS | `screenshots/task9-app-via-alb.png` |
-| SQL output | `screenshots/task9-sql-output.png` |
-| Security validation | `screenshots/task10-security-checks.png` |
+| Task 1: Networking | [VPC](screenshots/task1-01-vpc.png) · [Subnets](screenshots/task1-02-subnets.png) · [Subnet public IP settings](screenshots/task1-03-subnets-public-ip.png) · [NAT Gateway](screenshots/task1-04-nat-gateway.png) · [Public route table](screenshots/task1-05-public-route-table.png) · [App private route table](screenshots/task1-06-app-private-route-table.png) · [Route tables](screenshots/task1-07-route-tables.png) |
+| Task 2: Web tier | [Web instances](screenshots/task2-01-web-instances.png) · [SSH to web-1a](screenshots/task2-02-ssh-web-1a.png) · [Nginx on web-1a](screenshots/task2-03-nginx-web-1a.png) · [Form on web-1a](screenshots/task2-04-form-web-1a.png) · [Nginx on web-1b](screenshots/task2-05-nginx-web-1b.png) · [Form on web-1b](screenshots/task2-06-form-web-1b.png) |
+| Task 3: App tier | [All instances](screenshots/task3-01-all-instances.png) · [app-1b private IP only](screenshots/task3-02-app-1b-private-ip.png) · [Flask service on app-1a](screenshots/task3-03-flask-service-app-1a.png) · [Flask service on app-1b](screenshots/task3-04-flask-service-app-1b.png) |
+| Task 4: Database | [DB subnet group](screenshots/task4-01-db-subnet-group.png) · [RDS available, not public](screenshots/task4-02-rds-available.png) · [Database and table](screenshots/task4-03-database-table.png) |
+| Task 5: Security groups | [All security groups](screenshots/task5-01-security-groups.png) · [public-alb-sg](screenshots/task5-02-public-alb-sg.png) · [web-sg](screenshots/task5-03-web-sg.png) · [internal-alb-sg](screenshots/task5-04-internal-alb-sg.png) · [app-sg](screenshots/task5-05-app-sg.png) · [db-sg](screenshots/task5-06-db-sg.png) |
+| Task 6: Public ALB | [Public ALB](screenshots/task6-01-public-alb.png) · [web-tg healthy](screenshots/task6-02-web-tg-healthy.png) |
+| Task 7: Internal ALB | [Internal ALB](screenshots/task7-01-internal-alb.png) · [app-tg healthy](screenshots/task7-02-app-tg-healthy.png) |
+| Task 8: Nginx reverse proxy | [web-1a proxy](screenshots/task8-01-nginx-proxy-web-1a.png) · [web-1b proxy](screenshots/task8-02-nginx-proxy-web-1b.png) |
+| Task 9: RDS integration | [app-1a writes to RDS](screenshots/task9-01-app-1a-to-rds.png) · [app-1b writes to RDS](screenshots/task9-02-app-1b-to-rds.png) · [App via public ALB](screenshots/task9-03-app-via-public-alb.png) · [SQL output](screenshots/task9-04-sql-output.png) |
+| Task 10: Security validation | [Direct web access blocked](screenshots/task10-01-web-direct-blocked.png) · [Web to RDS blocked](screenshots/task10-02-web-to-rds-blocked.png) · [Web to Flask blocked](screenshots/task10-03-web-to-flask-blocked.png) |
 
 ---
 
